@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #tt{
+      width: 150px;
+      height: 60px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 50px;
+      background-color: red;
+    }
+    .t-num{
+      height: 100%;
+      overflow: hidden;
+      width: 40px;
+      line-height: 60px;
+      text-align: center;
+    }
+    .t-num-s{
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+    <div id="tt">
+    </div>
+</body>
+</html>
+<script src="./js/gua.js"></script>
+<script>
+  let num1 = (parseInt(Math.random() * 99 )<=10 ?'0'+ parseInt(Math.random() * 9 ) : parseInt(Math.random() * 99 )) +'.'+ (parseInt(Math.random() * 99 )<=10 ?'0'+ parseInt(Math.random() * 9 ) : parseInt(Math.random() * 99 ))
+  let t1 = numchange()
+  t1.change('tt', num1)
+  setInterval(() => {
+    t1.change('tt', num1)
+  },3000)
+</script>

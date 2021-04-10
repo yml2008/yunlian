@@ -1,0 +1,174 @@
+body {
+  background-color: #f8ca7f;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.box .box1 {
+  width: 100%;
+  height: 173.33333vw;
+  position: relative;
+}
+
+.box .box1 .img1 {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.box .box1 .img2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box .box1 .img3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box .box2 {
+  width: 93.33333vw;
+  height: 52.47376vh;
+  position: absolute;
+  left: 5%;
+  top: 12%;
+  z-index: 10001;
+  animation: myshu 0.5s infinite alternate;
+  transform-origin: 46.66667vw bottom;
+  display: none;
+}
+
+@-webkit-keyframes myshu {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.box .box6 {
+  width: 53.33333vw;
+  height: 17.33333vw;
+  background-color: #221f1f;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  line-height: 17.33333vw;
+  text-align: center;
+  border-radius: 2.66667vw;
+  display: none;
+  z-index: 10000000;
+}
+
+.box .toast-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.box .box4 {
+  width: 93.33333vw;
+  height: 52.47376vh;
+  position: absolute;
+  left: 3%;
+  top: 12%;
+  z-index: 1001;
+  display: none;
+}
+
+.box i {
+  z-index: 1001;
+  color: #fff;
+  position: absolute;
+  top: 49%;
+  left: 26%;
+  font-size: 5.33333vw;
+  display: none;
+}
+
+.box .box3 {
+  width: 93.33333vw;
+  height: 52.47376vh;
+  position: absolute;
+  left: 5%;
+  top: 12%;
+  z-index: 1000;
+  animation: myshu 0.5s infinite alternate;
+  transform-origin: 46.66667vw bottom;
+  display: none;
+}
+
+@-webkit-keyframes myshu {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.box .box5 {
+  z-index: 10000000001;
+  position: absolute;
+  top: 46%;
+  left: 32%;
+  text-align: center;
+  color: #fff;
+  display: none;
+}
+
+.box .box5 #tt {
+  width: 40vw;
+  height: 14.66667vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 13.33333vw;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+}
+
+.box .box5 .t-num {
+  height: 100%;
+  overflow: hidden;
+  width: 10.66667vw;
+  line-height: 12vw;
+  text-align: center;
+}
+
+.box .box5 .t-num-s {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.box .toast-maskc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(228, 225, 225, 0.6);
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+}

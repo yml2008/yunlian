@@ -1,0 +1,128 @@
+@function vw($px) {
+    @return ( $px / 750) *100vw
+}
+
+;
+@function vh($px) {
+    @return ( $px / 1334) *100vh
+}
+
+body{
+    background-color: #f8ca7f;
+}
+
+.box{
+    position: relative;
+    overflow: hidden;
+    .box1{
+        width: 100%;
+        height: vw(1300);
+        position: relative;
+        .img1{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .img2{
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .img3{
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .box4{
+        width: vw(700);
+        height: vh(700);
+        position: absolute;
+        left: 3%;
+        top: 12%;
+        z-index: 1001;
+        display: none;
+    }
+    i{
+        z-index: 1001;
+        color: #fff;
+        position: absolute;
+        top: 49%;
+        left: 26%;
+        font-size: vw(40);
+        display: none;
+
+    }
+    .box3{
+        width: vw(700);
+        height: vh(700);
+        position: absolute;
+        left: 5%;
+        top: 12%;
+        z-index: 1000;
+        animation: myshu 0.5s infinite alternate;
+        transform-origin:vw(350)  bottom;
+        display: none;
+        @-webkit-keyframes myshu {
+            0% {
+              transform: rotate(-5deg) ;
+            }
+            100% {
+              transform: rotate(5deg);
+            }
+        }
+    }
+    .box5{
+        z-index:10000000001;
+        position: absolute;
+        top: 46%;
+        left: 32%;
+        text-align: center;
+        color: #fff;
+        display: none;
+
+        #tt{
+            width: vw(300);
+            height: vw(110);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: vw(100);
+            // display: inline-block;
+            position: absolute;
+            top: 70%;
+            left: 60%;
+        }
+        .t-num{
+            height: 100%;
+            overflow: hidden;
+            width: vw(80);
+            line-height: vw(90);
+            text-align: center;
+        }
+        .t-num-s{
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .toast-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(228, 225, 225, 0.6);
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    
+}

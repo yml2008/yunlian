@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./common/common.css">
+    <link rel="stylesheet" href="./css/shoye.min.css">
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <img class="img1" src="./img/背景.png" alt="">
+            <img class="img2" src="./img/红包.png" alt="">
+            <img class="img3" src="./img/文案.png" alt="">
+        </div>
+        <div class="box2">
+            <img src="./img/立即领取btn.png" alt="">
+        </div>
+        <div class="toast-mask"></div>
+        <div class="box3">
+            超过每天扫码次数限制
+        </div>
+    </div>
+    
+</body>
+<script src="./js/jquery.min.js"></script>
+<script>
+    var count = 3;
+    var id = 202124561;
+
+    function settimeFn() {
+        var showTime = 1 * 1;
+        var time = showTime;
+        $(document).on('click', function() {
+            time = showTime;
+        });
+        var interCount = setInterval(function() {
+            time--;
+            if(time == 0) {
+                clearInterval(interCount);
+                ShowMessage();
+            }
+        }, 1000);
+    }
+    function ShowMessage() {
+        $(".box2").fadeIn();
+        $(".toast-mask").fadeIn();
+    };
+    settimeFn();
+
+    $(".box2").click(function(){
+        // id++
+
+        // var username = "yujie"
+        // var password = "123456"
+        // // 存值
+        // const info = [{ name: username }, { pwd: password }]
+        // localStorage.setItem("hao", JSON.stringify(info))
+        // // 取值
+        // let data1 = JSON.parse(localStorage.getItem("hao"))
+        // console.log('666',data1);
+        // $.ajax({
+        //     type: "GET",
+        //     url: "http://192.168.0.181//memberLogin.php" + userCode,
+        //     headers: {'Authorization': token}
+        // });
+
+        // var data = $.ajax('get','http://192.168.0.181/getRedpack.php?sid=20210407858113000001&fromid=10007&user_id=202124561')
+        // console.log('666',data);
+        let data = $.get("http://192.168.0.181/getRedpack.php", { sid: "John", fromid: "2pm",user_id:"202124561" } );
+        console.log("data",data);
+        count--
+
+        if(count<=0){
+            $(".box3").fadeIn(500);
+            function settimeFn() {
+            var showTime = 1 * 1;
+            var time = showTime;
+            $(document).on('click', function() {
+                time = showTime;
+            });
+            var interCount = setInterval(function() {
+                time--;
+                if(time == 0) {
+                    clearInterval(interCount);
+                    ShowMessage();
+                }
+            }, 1500);
+            }
+            function ShowMessage() {
+                $(".box3").fadeOut(500);
+            };
+            settimeFn();
+            return
+        }
+        console.log('666',count);
+    })
+</script>
+</html>

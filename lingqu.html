@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./common/common.css">
+    <link rel="stylesheet" href="./css/lingqu.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <img class="img1" src="./img/背景.png" alt="">
+            <img class="img2" src="./img/红包.png" alt="">
+            <img class="img3" src="./img/文案.png" alt="">
+        </div>
+        <div class="box4">
+            <img src="./img/获得现金红包2.png" alt=""> 
+        </div>
+        <div class="box5">
+            <div id="tt">
+            </div>                
+        </div>
+        <i>￥</i>
+        <div class="box3">
+            <img src="./img/获得现金红包3.png" alt="">
+        </div>
+        <div class="toast-mask"></div>
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/gua.js"></script>
+<script>
+    let num1 = 12.05
+    let t1 = numchange()
+    t1.change('tt', num1)
+    setInterval(() => {
+        t1.change('tt', num1)
+    },3000)
+
+    function settimeFn() {
+        var showTime = 1 * 1;
+        var time = showTime;
+        $(document).on('click', function() {
+            time = showTime;
+        });
+        var interCount = setInterval(function() {
+            time--;
+            if(time == 0) {
+                clearInterval(interCount);
+                ShowMessage();
+            }
+        }, 500);
+    }
+    function ShowMessage() {
+        $("i").fadeIn();
+        $(".box5").fadeIn();
+        $(".box3").fadeIn();
+        $(".box4").fadeIn();
+        $(".toast-mask").fadeIn();
+    };
+    settimeFn();
+</script>
+</html>
